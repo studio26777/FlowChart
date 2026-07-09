@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>School Management Website Flowchart</title>
+<style>
+  body { margin:0; padding:24px; background:#F4F8FC; font-family: "Segoe UI", Arial, sans-serif; }
+  .wrap { max-width:2400px; margin:0 auto; background:#FFFFFF; border:1px solid #B5D4F4; border-radius:12px; padding:16px; box-shadow:0 2px 10px rgba(4,44,83,0.08); }
+  svg { display:block; width:100%; height:auto; }
+  .footer-note { text-align:center; color:#185FA5; font-size:13px; margin-top:10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<svg viewBox="0 0 2400 1900" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>School Management Website Flowchart</title>
+<desc>Flowchart showing admin login, dashboard, six management modules (New Student, Edit Student, Fee Slip, Pay Fee, Search Student, Change Section/Promotion), a shared database, and return-to-dashboard / end flow.</desc>
+
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#0C447C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<rect x="0" y="0" width="2400" height="1900" fill="#FFFFFF"/>
+
+<!-- TITLE -->
+<text x="1200" y="42" text-anchor="middle" font-size="30" font-weight="700" fill="#042C53">School Management Website Flowchart</text>
+<text x="1200" y="70" text-anchor="middle" font-size="15" fill="#185FA5">Admin Module — Software Engineering SDLC Planning Phase</text>
+
+<!-- LEGEND -->
+<g>
+  <rect x="1980" y="20" width="380" height="180" rx="10" fill="#F4F8FC" stroke="#85B7EB" stroke-width="1.2"/>
+  <text x="2170" y="42" text-anchor="middle" font-size="15" font-weight="700" fill="#042C53">Legend</text>
+
+  <rect x="2000" y="55" width="60" height="26" rx="13" fill="#0C447C"/>
+  <text x="2075" y="72" font-size="13" fill="#042C53">Start / End</text>
+
+  <rect x="2000" y="90" width="60" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.2"/>
+  <text x="2075" y="107" font-size="13" fill="#042C53">Process step</text>
+
+  <polygon points="2030,120 2060,133 2030,146 2000,133" fill="#B5D4F4" stroke="#185FA5" stroke-width="1.2"/>
+  <text x="2075" y="137" font-size="13" fill="#042C53">Decision</text>
+
+  <ellipse cx="2030" cy="165" rx="30" ry="6" fill="#85B7EB" stroke="#0C447C" stroke-width="1.2"/>
+  <rect x="2000" y="165" width="60" height="14" fill="#85B7EB"/>
+  <path d="M2000,179 a30,6 0 0,0 60,0" fill="none" stroke="#0C447C" stroke-width="1.2"/>
+  <ellipse cx="2030" cy="165" rx="30" ry="6" fill="#85B7EB" stroke="#0C447C" stroke-width="1.2"/>
+  <text x="2075" y="177" font-size="13" fill="#042C53">Database</text>
+</g>
+
+<!-- START -->
+<rect x="1100" y="200" width="200" height="60" rx="30" fill="#0C447C"/>
+<text x="1200" y="234" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">Start</text>
+<line x1="1200" y1="260" x2="1200" y2="298" stroke="#0C447C" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+<!-- LOGIN -->
+<rect x="1030" y="300" width="340" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text x="1200" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#042C53">Admin Login Page</text>
+<text x="1200" y="348" text-anchor="middle" font-size="12" fill="#185FA5">Username &amp; Password</text>
+<line x1="1200" y1="370" x2="1200" y2="398" stroke="#0C447C" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+<!-- VALIDATE -->
+<rect x="1050" y="400" width="300" height="60" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text x="1200" y="434" text-anchor="middle" font-size="14" font-weight="700" fill="#042C53">Validate Login Credentials</text>
+<line x1="1200" y1="460" x2="1200" y2="488" stroke="#0C447C" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+<!-- DECISION -->
+<polygon points="1200,490 1340,555 1200,620 1060,555" fill="#B5D4F4" stroke="#185FA5" stroke-width="1.5"/>
+<text x="1200" y="550" text-anchor="middle" font-size="14" font-weight="700" fill="#042C53">Login</text>
+<text x="1200" y="567" text-anchor="middle" font-size="14" font-weight="700" fill="#042C53">Successful?</text>
+
+<!-- NO branch -->
+<line x1="1060" y1="555" x2="882" y2="555" stroke="#A32D2D" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="970" y="542" text-anchor="middle" font-size="12" font-weight="700" fill="#A32D2D">No</text>
+
+<rect x="622" y="525" width="260" height="60" rx="8" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5"/>
+<text x="752" y="550" text-anchor="middle" font-size="14" font-weight="700" fill="#791F1F">Show Error Message</text>
+<text x="752" y="568" text-anchor="middle" font-size="12" fill="#A32D2D">Invalid username or password</text>
+
+<path d="M752,525 L752,335 L1028,335" fill="none" stroke="#A32D2D" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="770" y="420" text-anchor="middle" font-size="12" fill="#A32D2D" transform="rotate(-90 770 420)">Retry Login</text>
+
+<!-- YES branch -->
+<line x1="1200" y1="620" x2="1200" y2="668" stroke="#0C447C" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="1220" y="648" font-size="12" font-weight="700" fill="#0C447C">Yes</text>
+
+<!-- DASHBOARD -->
+<rect x="1000" y="670" width="400" height="90" rx="10" fill="#0C447C"/>
+<text x="1200" y="705" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">Admin Dashboard</text>
+<text x="1200" y="727" text-anchor="middle" font-size="12" fill="#B5D4F4">Central control panel for all modules</text>
+
+<!-- Fan-out to 6 headers -->
+<line x1="1200" y1="760" x2="300" y2="828" stroke="#185FA5" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="1200" y1="760" x2="660" y2="828" stroke="#185FA5" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="1200" y1="760" x2="1020" y2="828" stroke="#185FA5" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="1200" y1="760" x2="1380" y2="828" stroke="#185FA5" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="1200" y1="760" x2="1740" y2="828" stroke="#185FA5" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="1200" y1="760" x2="2100" y2="828" stroke="#185FA5" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+<!-- ============ HEADERS ============ -->
+<!-- Col1 x=300 -->
+<rect x="150" y="830" width="300" height="60" rx="8" fill="#185FA5"/>
+<text x="300" y="866" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">1. New Student</text>
+<!-- Col2 x=660 -->
+<rect x="510" y="830" width="300" height="60" rx="8" fill="#185FA5"/>
+<text x="660" y="866" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">2. Edit Student</text>
+<!-- Col3 x=1020 -->
+<rect x="870" y="830" width="300" height="60" rx="8" fill="#185FA5"/>
+<text x="1020" y="866" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">3. Fee Slip</text>
+<!-- Col4 x=1380 -->
+<rect x="1230" y="830" width="300" height="60" rx="8" fill="#185FA5"/>
+<text x="1380" y="866" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">4. Pay Fee</text>
+<!-- Col5 x=1740 -->
+<rect x="1590" y="830" width="300" height="60" rx="8" fill="#185FA5"/>
+<text x="1740" y="866" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">5. Search Student</text>
+<!-- Col6 x=2100 -->
+<rect x="1950" y="830" width="300" height="60" rx="8" fill="#185FA5"/>
+<text x="2100" y="858" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">6. Change Section /</text>
+<text x="2100" y="876" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">Promotion</text>
+
+<!-- ============ COLUMN 1: NEW STUDENT ============ -->
+<line x1="300" y1="890" x2="300" y2="918" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="150" y="920" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="300" y="948" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Enter Student Information</text>
+<text x="300" y="966" text-anchor="middle" font-size="10.5" fill="#185FA5">No, Name, Father, Address, Phone,</text>
+<text x="300" y="979" text-anchor="middle" font-size="10.5" fill="#185FA5">Emergency #, School, Class, B-Form</text>
+
+<line x1="300" y1="990" x2="300" y2="1018" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="150" y="1020" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="300" y="1060" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Save Data to Database</text>
+
+<!-- ============ COLUMN 2: EDIT STUDENT ============ -->
+<line x1="660" y1="890" x2="660" y2="918" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="510" y="920" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="660" y="948" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Search Student</text>
+<text x="660" y="966" text-anchor="middle" font-size="11" fill="#185FA5">By Student No, Name, or Class</text>
+
+<line x1="660" y1="990" x2="660" y2="1018" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="510" y="1020" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="660" y="1060" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Update Student Information</text>
+
+<line x1="660" y1="1090" x2="660" y2="1118" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="510" y="1120" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="660" y="1160" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Save Changes to Database</text>
+
+<!-- ============ COLUMN 3: FEE SLIP ============ -->
+<line x1="1020" y1="890" x2="1020" y2="918" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="870" y="920" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="1020" y="960" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Search Student</text>
+
+<line x1="1020" y1="990" x2="1020" y2="1018" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="870" y="1020" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="1020" y="1060" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Check Fee Status</text>
+
+<line x1="1020" y1="1090" x2="1020" y2="1118" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="870" y="1120" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="1020" y="1148" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Display Fee Status</text>
+<text x="1020" y="1166" text-anchor="middle" font-size="11" fill="#185FA5">Paid / Pending / Remaining</text>
+
+<!-- ============ COLUMN 4: PAY FEE ============ -->
+<line x1="1380" y1="890" x2="1380" y2="918" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1230" y="920" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="1380" y="960" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Search Student</text>
+
+<line x1="1380" y1="990" x2="1380" y2="1018" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1230" y="1020" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="1380" y="1060" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Receive Fee Payment</text>
+
+<line x1="1380" y1="1090" x2="1380" y2="1118" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1230" y="1120" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="1380" y="1148" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Apply Concession</text>
+<text x="1380" y="1166" text-anchor="middle" font-size="11" fill="#185FA5">If required</text>
+
+<line x1="1380" y1="1190" x2="1380" y2="1218" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1230" y="1220" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="1380" y="1260" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Update Database</text>
+
+<line x1="1380" y1="1290" x2="1380" y2="1318" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1230" y="1320" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="1380" y="1348" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Generate &amp; Print</text>
+<text x="1380" y="1366" text-anchor="middle" font-size="11" fill="#185FA5">Fee Slip</text>
+
+<!-- ============ COLUMN 5: SEARCH STUDENT ============ -->
+<line x1="1740" y1="890" x2="1740" y2="918" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1590" y="920" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="1740" y="948" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Search Student</text>
+<text x="1740" y="966" text-anchor="middle" font-size="11" fill="#185FA5">By Student No, Name, or Class</text>
+
+<line x1="1740" y1="990" x2="1740" y2="1018" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1590" y="1020" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="1740" y="1060" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Display Details &amp; Status</text>
+
+<!-- ============ COLUMN 6: CHANGE SECTION / PROMOTION ============ -->
+<line x1="2100" y1="890" x2="2100" y2="918" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1950" y="920" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="2100" y="960" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Promote to Next Class</text>
+
+<line x1="2100" y1="990" x2="2100" y2="1018" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1950" y="1020" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="2100" y="1060" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Change Section</text>
+
+<line x1="2100" y1="1090" x2="2100" y2="1118" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1950" y="1120" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="2100" y="1160" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Update Fee Structure</text>
+
+<line x1="2100" y1="1190" x2="2100" y2="1218" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1950" y="1220" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+<text x="2100" y="1260" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Save Changes to Database</text>
+
+<!-- ============ CONVERGENCE TO DATABASE ============ -->
+<path d="M300,1090 L300,1440 L1200,1440" fill="none" stroke="#5F5E5A" stroke-width="1.2"/>
+<path d="M660,1190 L660,1440" fill="none" stroke="#5F5E5A" stroke-width="1.2"/>
+<path d="M1020,1190 L1020,1440" fill="none" stroke="#5F5E5A" stroke-width="1.2"/>
+<path d="M1380,1390 L1380,1440" fill="none" stroke="#5F5E5A" stroke-width="1.2"/>
+<path d="M1740,1090 L1740,1440 L1200,1440" fill="none" stroke="#5F5E5A" stroke-width="1.2"/>
+<path d="M2100,1290 L2100,1440" fill="none" stroke="#5F5E5A" stroke-width="1.2"/>
+<line x1="1200" y1="1440" x2="1200" y2="1468" stroke="#0C447C" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+<!-- DATABASE (cylinder) -->
+<rect x="1050" y="1488" width="300" height="84" fill="#85B7EB"/>
+<path d="M1050,1572 a150,18 0 0,0 300,0" fill="none" stroke="#0C447C" stroke-width="1.6"/>
+<line x1="1050" y1="1488" x2="1050" y2="1572" stroke="#0C447C" stroke-width="1.6"/>
+<line x1="1350" y1="1488" x2="1350" y2="1572" stroke="#0C447C" stroke-width="1.6"/>
+<ellipse cx="1200" cy="1488" rx="150" ry="18" fill="#85B7EB" stroke="#0C447C" stroke-width="1.6"/>
+<text x="1200" y="1528" text-anchor="middle" font-size="15" font-weight="700" fill="#042C53">Central Database</text>
+<text x="1200" y="1548" text-anchor="middle" font-size="11.5" fill="#0C447C">Student, Fee &amp; Academic Records</text>
+
+<!-- DB -> RETURN -->
+<line x1="1200" y1="1590" x2="1200" y2="1648" stroke="#0C447C" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+<!-- RETURN TO DASHBOARD -->
+<rect x="990" y="1650" width="420" height="80" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.6"/>
+<text x="1200" y="1685" text-anchor="middle" font-size="15" font-weight="700" fill="#042C53">Return to Admin Dashboard</text>
+<text x="1200" y="1706" text-anchor="middle" font-size="11.5" fill="#185FA5">After completing selected operation</text>
+
+<!-- Loop back to dashboard -->
+<path d="M1410,1670 L2300,1670 L2300,715 L1402,715" fill="none" stroke="#185FA5" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<text x="2320" y="1195" text-anchor="middle" font-size="12" fill="#185FA5" transform="rotate(-90 2320 1195)">Continue with another operation</text>
+
+<!-- RETURN -> END -->
+<line x1="1200" y1="1730" x2="1200" y2="1768" stroke="#0C447C" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+<!-- END -->
+<rect x="1100" y="1770" width="200" height="60" rx="30" fill="#0C447C"/>
+<text x="1200" y="1804" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">End</text>
+
+</svg>
+</div>
+<div class="footer-note">School Management Website Flowchart &mdash; Admin login, dashboard, six management modules, shared database, and return/exit flow</div>
+</body>
+</html>
