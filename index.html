@@ -12,9 +12,9 @@
 </head>
 <body>
 <div class="wrap">
-<svg viewBox="0 0 2400 2360" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg viewBox="0 0 2400 2950" xmlns="http://www.w3.org/2000/svg" role="img">
 <title>School Management Website Flowchart</title>
-<desc>Flowchart showing admin login, dashboard, six management modules (New Student, Edit Student, Fee Slip, Pay Fee, Search Student, Change Section/Promotion), a shared database, return-to-dashboard / end flow, and a detailed zoom-in of the Fee Status interaction (clickable Received / Pending cards revealing matching student lists).</desc>
+<desc>Flowchart showing admin login, dashboard, six management modules, a shared database, return-to-dashboard / end flow, a Fee Status interaction detail, and an App Launch / Logo Splash / Session Security detail covering the 3D rotating logo, one-minute auto-lock, and single active login session.</desc>
 
 <defs>
   <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -22,7 +22,7 @@
   </marker>
 </defs>
 
-<rect x="0" y="0" width="2400" height="2360" fill="#FFFFFF"/>
+<rect x="0" y="0" width="2400" height="2950" fill="#FFFFFF"/>
 
 <!-- TITLE -->
 <text x="1200" y="42" text-anchor="middle" font-size="30" font-weight="700" fill="#042C53">School Management Website Flowchart</text>
@@ -58,6 +58,8 @@
 <rect x="1030" y="300" width="340" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
 <text x="1200" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#042C53">Admin Login Page</text>
 <text x="1200" y="348" text-anchor="middle" font-size="12" fill="#185FA5">Username &amp; Password</text>
+<circle cx="1357" cy="308" r="13" fill="#0C447C"/>
+<text x="1357" y="312" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">B</text>
 <line x1="1200" y1="370" x2="1200" y2="398" stroke="#0C447C" stroke-width="1.8" marker-end="url(#arrow)"/>
 
 <!-- VALIDATE -->
@@ -306,8 +308,105 @@
 <rect x="1000" y="2332" width="400" height="26" rx="6" fill="#F4F8FC" stroke="#85B7EB" stroke-width="1"/>
 <text x="1200" y="2350" text-anchor="middle" font-size="11" fill="#0C447C">Both lists read live from the Central Database</text>
 
+<!-- ============================================================ -->
+<!-- DETAIL B: APP LAUNCH, LOGO SPLASH & SESSION SECURITY          -->
+<!-- ============================================================ -->
+<rect x="30" y="2378" width="2340" height="2" fill="#B5D4F4"/>
+<circle cx="1200" cy="2376" r="15" fill="#0C447C"/>
+<text x="1200" y="2381" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">B</text>
+
+<text x="1200" y="2416" text-anchor="middle" font-size="22" font-weight="700" fill="#042C53">Detail B — App Launch, Logo Splash &amp; Session Security</text>
+<text x="1200" y="2438" text-anchor="middle" font-size="13" fill="#185FA5">Covers the 3D rotating logo before login, 1-minute auto-lock, and single active login session</text>
+
+<!-- Sub-flow 1: Splash screen + click to login -->
+<text x="60" y="2472" font-size="13" font-weight="700" fill="#0C447C">1. Launch &amp; Logo Splash</text>
+
+<rect x="60" y="2482" width="180" height="60" rx="30" fill="#0C447C"/>
+<text x="150" y="2517" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">App Launch</text>
+<line x1="240" y1="2512" x2="278" y2="2512" stroke="#0C447C" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+<rect x="280" y="2472" width="300" height="80" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text x="430" y="2500" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">3D Rotating Logo Screen</text>
+<text x="430" y="2518" text-anchor="middle" font-size="11" fill="#185FA5">Logo keeps rotating in 3D</text>
+<text x="430" y="2534" text-anchor="middle" font-size="11" fill="#185FA5">while no one interacts</text>
+<path d="M580,2482 C 620,2440 340,2440 320,2470" fill="none" stroke="#185FA5" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<text x="450" y="2450" text-anchor="middle" font-size="10.5" fill="#185FA5">No click — keeps rotating</text>
+
+<line x1="580" y1="2512" x2="618" y2="2512" stroke="#0C447C" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+<polygon points="700,2472 800,2512 700,2552 600,2512" fill="#B5D4F4" stroke="#185FA5" stroke-width="1.5"/>
+<text x="700" y="2508" text-anchor="middle" font-size="11.5" font-weight="700" fill="#042C53">Logo</text>
+<text x="700" y="2523" text-anchor="middle" font-size="11.5" font-weight="700" fill="#042C53">Clicked?</text>
+
+<line x1="800" y1="2512" x2="838" y2="2512" stroke="#0C447C" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="820" y="2500" text-anchor="middle" font-size="11" font-weight="700" fill="#0C447C">Yes</text>
+
+<rect x="840" y="2477" width="360" height="70" rx="8" fill="#0C447C"/>
+<text x="1020" y="2505" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">Show Admin Login Page ↑</text>
+<text x="1020" y="2523" text-anchor="middle" font-size="10.5" fill="#B5D4F4">(see Login step at top of diagram)</text>
+
+<text x="700" y="2440" text-anchor="middle" font-size="10.5" font-weight="700" fill="#A32D2D">No → loop back and keep rotating</text>
+
+<!-- Sub-flow 2: Auto-lock after 1 minute idle -->
+<text x="60" y="2612" font-size="13" font-weight="700" fill="#0C447C">2. Auto-Lock After 1 Minute Idle</text>
+
+<rect x="60" y="2622" width="360" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text x="240" y="2650" text-anchor="middle" font-size="12.5" font-weight="700" fill="#042C53">Admin Session Active</text>
+<text x="240" y="2668" text-anchor="middle" font-size="10.5" fill="#185FA5">Dashboard / any module page</text>
+
+<line x1="420" y1="2657" x2="458" y2="2657" stroke="#0C447C" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+<polygon points="540,2617 660,2657 540,2697 420,2657" fill="#B5D4F4" stroke="#185FA5" stroke-width="1.5"/>
+<text x="540" y="2652" text-anchor="middle" font-size="11" font-weight="700" fill="#042C53">Idle for 1</text>
+<text x="540" y="2667" text-anchor="middle" font-size="11" font-weight="700" fill="#042C53">Minute?</text>
+
+<path d="M540,2617 C 540,2580 300,2580 240,2620" fill="none" stroke="#185FA5" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<text x="390" y="2588" text-anchor="middle" font-size="10.5" fill="#185FA5">No — stays active</text>
+
+<line x1="660" y1="2657" x2="698" y2="2657" stroke="#A32D2D" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="680" y="2645" text-anchor="middle" font-size="11" font-weight="700" fill="#A32D2D">Yes</text>
+
+<rect x="700" y="2622" width="380" height="70" rx="8" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5"/>
+<text x="890" y="2650" text-anchor="middle" font-size="12.5" font-weight="700" fill="#791F1F">Auto-Lock: Return to Logo Screen</text>
+<text x="890" y="2668" text-anchor="middle" font-size="10.5" fill="#A32D2D">Screen locks and logo starts rotating again</text>
+
+<text x="890" y="2712" text-anchor="middle" font-size="11" font-style="italic" fill="#0C447C">Keeps non-admin users from seeing fee amounts on an unattended screen</text>
+<path d="M890,2692 C 890,2760 430,2650 240,2554" fill="none" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+<!-- Sub-flow 3: Single session on reload -->
+<text x="60" y="2790" font-size="13" font-weight="700" fill="#0C447C">3. Single Active Login on Reload</text>
+
+<rect x="60" y="2800" width="320" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text x="220" y="2828" text-anchor="middle" font-size="12.5" font-weight="700" fill="#042C53">Browser Reload / Revisit</text>
+<text x="220" y="2846" text-anchor="middle" font-size="10.5" fill="#185FA5">Same admin opens the site again</text>
+
+<line x1="380" y1="2835" x2="418" y2="2835" stroke="#0C447C" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+<polygon points="530,2795 660,2835 530,2875 400,2835" fill="#B5D4F4" stroke="#185FA5" stroke-width="1.5"/>
+<text x="530" y="2828" text-anchor="middle" font-size="10.5" font-weight="700" fill="#042C53">Session Still</text>
+<text x="530" y="2843" text-anchor="middle" font-size="10.5" font-weight="700" fill="#042C53">Active &amp; Not</text>
+<text x="530" y="2858" text-anchor="middle" font-size="10.5" font-weight="700" fill="#042C53">Auto-Locked?</text>
+
+<line x1="660" y1="2835" x2="698" y2="2835" stroke="#0C447C" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="680" y="2823" text-anchor="middle" font-size="11" font-weight="700" fill="#0C447C">Yes</text>
+
+<rect x="700" y="2800" width="380" height="70" rx="8" fill="#0C447C"/>
+<text x="890" y="2828" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">Resume Dashboard Directly</text>
+<text x="890" y="2846" text-anchor="middle" font-size="10.5" fill="#B5D4F4">No re-login needed within the active session</text>
+
+<line x1="530" y1="2875" x2="530" y2="2905" stroke="#A32D2D" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="550" y="2894" text-anchor="middle" font-size="11" font-weight="700" fill="#A32D2D">No</text>
+
+<rect x="360" y="2907" width="340" height="36" rx="8" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5"/>
+<text x="530" y="2930" text-anchor="middle" font-size="11.5" font-weight="700" fill="#791F1F">Redirect to Admin Login Page ↑</text>
+
+<text x="1300" y="2830" font-size="11" fill="#0C447C">Note: Only one login is kept active at a time.</text>
+<text x="1300" y="2848" font-size="11" fill="#0C447C">Reloading right after login goes straight to the</text>
+<text x="1300" y="2866" font-size="11" fill="#0C447C">Dashboard; once the 1-minute idle lock triggers,</text>
+<text x="1300" y="2884" font-size="11" fill="#0C447C">reload or return sends the admin back to Login.</text>
+
 </svg>
 </div>
-<div class="footer-note">School Management Website Flowchart &mdash; Admin login, dashboard, six management modules, shared database, return/exit flow, and Fee Status interaction detail (Detail A)</div>
+<div class="footer-note">School Management Website Flowchart &mdash; Admin login, dashboard, six management modules, shared database, return/exit flow, Fee Status interaction detail (Detail A), and App Launch / Logo Splash / Session Security detail (Detail B)</div>
 </body>
 </html>
