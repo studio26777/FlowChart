@@ -12,9 +12,9 @@
 </head>
 <body>
 <div class="wrap">
-<svg viewBox="0 0 2400 1900" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg viewBox="0 0 2400 2360" xmlns="http://www.w3.org/2000/svg" role="img">
 <title>School Management Website Flowchart</title>
-<desc>Flowchart showing admin login, dashboard, six management modules (New Student, Edit Student, Fee Slip, Pay Fee, Search Student, Change Section/Promotion), a shared database, and return-to-dashboard / end flow.</desc>
+<desc>Flowchart showing admin login, dashboard, six management modules (New Student, Edit Student, Fee Slip, Pay Fee, Search Student, Change Section/Promotion), a shared database, return-to-dashboard / end flow, and a detailed zoom-in of the Fee Status interaction (clickable Received / Pending cards revealing matching student lists).</desc>
 
 <defs>
   <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -22,7 +22,7 @@
   </marker>
 </defs>
 
-<rect x="0" y="0" width="2400" height="1900" fill="#FFFFFF"/>
+<rect x="0" y="0" width="2400" height="2360" fill="#FFFFFF"/>
 
 <!-- TITLE -->
 <text x="1200" y="42" text-anchor="middle" font-size="30" font-weight="700" fill="#042C53">School Management Website Flowchart</text>
@@ -157,6 +157,8 @@
 <rect x="870" y="1120" width="300" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
 <text x="1020" y="1148" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Display Fee Status</text>
 <text x="1020" y="1166" text-anchor="middle" font-size="11" fill="#185FA5">Paid / Pending / Remaining</text>
+<circle cx="1163" cy="1127" r="13" fill="#0C447C"/>
+<text x="1163" y="1131" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">A</text>
 
 <!-- ============ COLUMN 4: PAY FEE ============ -->
 <line x1="1380" y1="890" x2="1380" y2="918" stroke="#0C447C" stroke-width="1.4" marker-end="url(#arrow)"/>
@@ -245,8 +247,67 @@
 <rect x="1100" y="1770" width="200" height="60" rx="30" fill="#0C447C"/>
 <text x="1200" y="1804" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">End</text>
 
+<!-- ============================================================ -->
+<!-- DETAIL A: FEE STATUS INTERACTION (zoom-in of Fee Slip step)   -->
+<!-- ============================================================ -->
+<line x1="1200" y1="1834" x2="1200" y2="1876" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5 4"/>
+<rect x="30" y="1878" width="2340" height="2" fill="#B5D4F4"/>
+
+<circle cx="1200" cy="1876" r="15" fill="#0C447C"/>
+<text x="1200" y="1881" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">A</text>
+
+<text x="1200" y="1920" text-anchor="middle" font-size="22" font-weight="700" fill="#042C53">Detail A — Fee Status Interaction</text>
+<text x="1200" y="1942" text-anchor="middle" font-size="13" fill="#185FA5">Zoomed-in view of the "Display Fee Status" step inside the Fee Slip module</text>
+
+<!-- Status Panel -->
+<rect x="1030" y="1970" width="340" height="70" rx="8" fill="#0C447C"/>
+<text x="1200" y="1999" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">Status Panel Loads</text>
+<text x="1200" y="2019" text-anchor="middle" font-size="11.5" fill="#B5D4F4">Shows Total Received &amp; Total Pending cards</text>
+
+<!-- Fan out to two clickable cards -->
+<line x1="1080" y1="2040" x2="830" y2="2078" stroke="#185FA5" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="1320" y1="2040" x2="1570" y2="2078" stroke="#185FA5" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+<!-- LEFT: Fees Received card -->
+<rect x="680" y="2080" width="300" height="72" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text x="830" y="2108" text-anchor="middle" font-size="13" font-weight="700" fill="#042C53">Click: "Fees Received" Card</text>
+<text x="830" y="2126" text-anchor="middle" font-size="11" fill="#185FA5">Displays total amount collected</text>
+<text x="830" y="2142" text-anchor="middle" font-size="10.5" fill="#185FA5">e.g. Total Received: Rs 84,000</text>
+
+<line x1="830" y1="2152" x2="830" y2="2180" stroke="#0C447C" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+<rect x="680" y="2182" width="300" height="110" rx="8" fill="#FFFFFF" stroke="#185FA5" stroke-width="1.3"/>
+<text x="830" y="2206" text-anchor="middle" font-size="12.5" font-weight="700" fill="#042C53">Show List: Paid Students</text>
+<text x="710" y="2226" font-size="10.5" fill="#185FA5">• Student No, Name, Class</text>
+<text x="710" y="2242" font-size="10.5" fill="#185FA5">• Amount Paid</text>
+<text x="710" y="2258" font-size="10.5" fill="#185FA5">• Status tag: "Paid"</text>
+<text x="710" y="2278" font-size="10" fill="#0C447C" font-style="italic">Click card again to collapse list</text>
+
+<!-- RIGHT: Fees Pending card -->
+<rect x="1420" y="2080" width="300" height="72" rx="8" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5"/>
+<text x="1570" y="2108" text-anchor="middle" font-size="13" font-weight="700" fill="#791F1F">Click: "Fees Pending" Card</text>
+<text x="1570" y="2126" text-anchor="middle" font-size="11" fill="#A32D2D">Displays total amount due</text>
+<text x="1570" y="2142" text-anchor="middle" font-size="10.5" fill="#A32D2D">e.g. Total Pending: Rs 42,000</text>
+
+<line x1="1570" y1="2152" x2="1570" y2="2180" stroke="#A32D2D" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+<rect x="1420" y="2182" width="300" height="110" rx="8" fill="#FFFFFF" stroke="#E24B4A" stroke-width="1.3"/>
+<text x="1570" y="2206" text-anchor="middle" font-size="12.5" font-weight="700" fill="#791F1F">Show List: Pending Students</text>
+<text x="1450" y="2226" font-size="10.5" fill="#A32D2D">• Student No, Name, Class</text>
+<text x="1450" y="2242" font-size="10.5" fill="#A32D2D">• Amount Due</text>
+<text x="1450" y="2258" font-size="10.5" fill="#A32D2D">• Status tag: "Pending"</text>
+<text x="1450" y="2278" font-size="10" fill="#A32D2D" font-style="italic">Click card again to collapse list</text>
+
+<!-- Data source note -->
+<line x1="830" y1="2292" x2="830" y2="2312" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="1570" y1="2292" x2="1570" y2="2312" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="830" y1="2312" x2="1570" y2="2312" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4 3"/>
+<line x1="1200" y1="2312" x2="1200" y2="2330" stroke="#5F5E5A" stroke-width="1.1" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+<rect x="1000" y="2332" width="400" height="26" rx="6" fill="#F4F8FC" stroke="#85B7EB" stroke-width="1"/>
+<text x="1200" y="2350" text-anchor="middle" font-size="11" fill="#0C447C">Both lists read live from the Central Database</text>
+
 </svg>
 </div>
-<div class="footer-note">School Management Website Flowchart &mdash; Admin login, dashboard, six management modules, shared database, and return/exit flow</div>
+<div class="footer-note">School Management Website Flowchart &mdash; Admin login, dashboard, six management modules, shared database, return/exit flow, and Fee Status interaction detail (Detail A)</div>
 </body>
 </html>
